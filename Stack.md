@@ -19,9 +19,9 @@ The index where the top most/left most value of an array.
 The actual array of the Stack
 
 #### Vertical version
-![alt text](vertical_stack.jpg)
+![alt text](images/vertical_stack.jpg)
 #### Horizontal version
-![alt text](horizontal_stack.jpg)
+![alt text](images/horizontal_stack.jpg)
 
 ## Stack Operations
 ### Push
@@ -32,7 +32,7 @@ void push(Stack* stack, int val){
 	stack->stk[stack->tos] = val;
 }
 ```
-![alt text](push_stack.gif)
+![alt text](images/push_stack.gif)
 ### Pop
 The function outputs the value in tos and moves tos lower by 1.
 ```c
@@ -42,7 +42,7 @@ int push(Stack* stack){
 	return data;
 }
 ```
-![alt text](pop_stack.gif)
+![alt text](images/pop_stack.gif)
 ``` 
 Even though the numbers are not removed in the array because its above tos, we cant really see them anymore.
 ```
