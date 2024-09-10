@@ -1,34 +1,36 @@
-# Stacks
 
-A stack is a list with the restriction that inserts and deletes
-can only be performed on the top of the list.
-## Stack Array Version
+# Stacks Linked List
+
+The linked list version of a stack uses node structures and node references instead of
+an array. This makes the stack have a dynamic size.
+## Stack Linked List;
 ```c
-typedef Struct{
-int tos;
-int stk[size];
-} Stack;
+typedef struct node* nodeptr;
+struct node{
+    int val;
+    nodeptr next;
+} Node;
 ```
-#### tos(top of stack)
-The index where the top most/left most value of an array.
+#### val
+The value stored in the node.
 #### stk
-The actual array of the Stack
+The pointer connecting the next node.
 
-#### Vertical version
-![alt text](Images/vertical_stack.jpg)
-#### Horizontal version
-![alt text](Images/horizontal_stack.jpg)
+#### Linked List Structure
+![alt text](Images/stack_linkedlist.jpg)
 
 ## Stack Operations
 ### Push
-The function increases the tos by 1 and adds a value in that index.
+The function creates a new node and inserts the current top/head node next to the new  node.
 ```c
-void push(Stack* stack, int val){
-	stack->tos += 1;
-	stack->stk[stack->tos] = val;
+void push(Node* head, int val){
+	nodeptr node = malloc(sizeof(Node));
+    node->val = val;
+    node->next = *head;
+    *head = node;
 }
 ```
-![alt text](Images/push_stack.gif)
+![alt text](Images/push_stackLL.gif)
 ### Pop
 The function outputs the value in tos and moves tos lower by 1.
 ```c
