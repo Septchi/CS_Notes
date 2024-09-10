@@ -32,7 +32,7 @@ void push(Stack* stack, int val){
 ### Pop
 The function outputs the value in tos and moves tos lower by 1.
 ```c
-int push(Stack* stack){
+int pop(Stack* stack){
 	int data = stack->stk[stack->tos];
 	stack->tos -= 1;
 	return data;
@@ -73,3 +73,7 @@ int peak(Stack stack){
 	return data;
 }
 ```
+## References
+### Linked List Version
+["Stack Linked List"](Stack_LinkedList.md)
+### Examples

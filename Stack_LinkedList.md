@@ -77,3 +77,7 @@ int peak(nodeptr head){
 	return data;
 }
 ```
+## References
+### Array version
+["Stack Linked List"](Stack_LinkedList.md)
+### Examples
