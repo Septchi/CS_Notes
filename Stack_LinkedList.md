@@ -23,7 +23,7 @@ The pointer connecting the next node.
 ### Push
 The function creates a new node and inserts the current top/head node next to the new  node.
 ```c
-void push(Node* head, int val){
+void push(nodeptr* head, int val){
 	nodeptr node = malloc(sizeof(Node));
     node->val = val;
     node->next = *head;
@@ -34,15 +34,17 @@ void push(Node* head, int val){
 ### Pop
 The function outputs the value in tos and moves tos lower by 1.
 ```c
-int push(Stack* stack){
-	int data = stack->stk[stack->tos];
-	stack->tos -= 1;
+int pop(nodeptr* head){
+	int data = (*head)->data;
+    nodeptr temp = *head;
+    *head = temp->next;
+	free(temp);
 	return data;
 }
 ```
-![alt text](Images/pop_stack.gif)
+![alt text](Images/pop_stackLL.gif)
 ``` 
-Even though the numbers are not removed in the array because its above tos, we cant really see them anymore.
+The free function deallocates the memory of the node pointer so the program reuse the memory from the free'd node.
 ```
 ### IsFull
 Functions checks if the stack is full by checking if tos is equal to the last index.
@@ -58,9 +60,9 @@ bool isFull(int tos){
 ### IsEmpty
 Functions checks if the stack is empty by checking if tos is equal to -1.
 ```c
-bool isEmpty(int tos){
+bool isEmpty(nodeptr head){
 	bool empty = false;
-	if(tos == -1){
+	if(head == NULL){
 		empty = true;
 	}
 	return empty;
@@ -68,10 +70,10 @@ bool isEmpty(int tos){
 ```
 
 ### Peak
-Function will output the value in tos but will not move tos.
+Function will output the value in the top of the stack/(the head node).
 ```c
-int peak(Stack stack){
-	int data = stack.stk[stack.tos];
+int peak(nodeptr head){
+	int data = head.val;
 	return data;
 }
 ```
