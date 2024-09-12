@@ -79,5 +79,5 @@ int peak(nodeptr head){
 ```
 ## References
 ### Array version
-["Stack Linked List"](Stack_LinkedList.md)
+[Stack Linked List](Stack_LinkedList.md)
 ### Examples

@@ -11,13 +11,14 @@ int stk[size];
 ```
 #### tos(top of stack)
 The index where the top most/left most value of an array.
+Starts at index -1.
 #### stk
 The actual array of the Stack
 
 #### Vertical version
-![alt text](Images/vertical_stack.jpg)
+![vertical_stack](Images/vertical_stack.jpg)
 #### Horizontal version
-![alt text](Images/horizontal_stack.jpg)
+![horizontal_stack](Images/horizontal_stack.jpg)
 
 ## Stack Operations
 ### Push
@@ -28,7 +29,7 @@ void push(Stack* stack, int val){
 	stack->stk[stack->tos] = val;
 }
 ```
-![alt text](Images/push_stack.gif)
+![push_gif](Images/push_stack.gif)
 ### Pop
 The function outputs the value in tos and moves tos lower by 1.
 ```c
@@ -38,12 +39,12 @@ int pop(Stack* stack){
 	return data;
 }
 ```
-![alt text](Images/pop_stack.gif)
+![pop_gif](Images/pop_stack.gif)
 ``` 
 Even though the numbers are not removed in the array because its above tos, we cant really see them anymore.
 ```
 ### IsFull
-Functions checks if the stack is full by checking if tos is equal to the last index.
+The function checks if the stack is full by checking if tos is equal to the last index.
 ```c
 bool isFull(int tos){
 	bool full = false;
@@ -54,7 +55,7 @@ bool isFull(int tos){
 }
 ```
 ### IsEmpty
-Functions checks if the stack is empty by checking if tos is equal to -1.
+The function checks if the stack is empty by checking if tos is equal to -1.
 ```c
 bool isEmpty(int tos){
 	bool empty = false;
@@ -65,15 +66,15 @@ bool isEmpty(int tos){
 }
 ```
 
-### Peak
+### Peek
 Function will output the value in tos but will not move tos.
 ```c
-int peak(Stack stack){
+int peek(Stack stack){
 	int data = stack.stk[stack.tos];
 	return data;
 }
 ```
 ## References
 ### Linked List Version
-["Stack Linked List"](Stack_LinkedList.md)
+[Stack Linked List](Stack_LinkedList.md)
 ### Examples
