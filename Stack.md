@@ -78,3 +78,4 @@ int peek(Stack stack){
 ### Linked List Version
 [Stack Linked List](Stack_LinkedList.md)
 ### Examples
+[Binary Convertion](Examples/convertToBin.c)
