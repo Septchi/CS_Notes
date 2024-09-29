@@ -81,7 +81,7 @@ int peek(nodeptr front){
 ```
 ## References
 ### Array version
-[Linear Queue](Queue.md)
+[Linear Queue](Queue.md)<br>
 [Circular Queue](CQueue.md)
 ### Examples
 

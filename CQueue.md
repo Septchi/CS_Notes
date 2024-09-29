@@ -73,5 +73,8 @@ bool isEmpty(int rear){
 }
 ```
 ## Reference
-
+### Linear Version
+[Linear Queue](Queue.md)
+### Linked List Version
+[Queue linked List](Queue_LinkedList.md)
 [Back To Main](readme.md)
