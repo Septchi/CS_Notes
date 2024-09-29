@@ -1,8 +1,8 @@
+# Queue Linked List
 
-# Stacks Linked List
-
-The linked list version of a stack uses node structures and node references instead of
+The linked list version of a Queue uses node structures and node references instead of
 an array. This makes the stack have a dynamic size.
+You need 2 nodes **front** and **rear** to use properly.
 ## Stack Linked List;
 ```c
 typedef struct node* nodeptr;
@@ -13,31 +13,40 @@ struct node{
 ```
 #### val
 The value stored in the node.
-#### stk
+#### next
 The pointer connecting the next node.
 
 #### Linked List Structure
 ![alt text](Images/stack_linkedlist.png)
 
 ## Stack Operations
-### Push
+### Enqueue
 The function creates a new node and inserts the current top/head node next to the new  node.
 ```c
-void push(nodeptr* head, int val){
+void enqueue(nodeptr* front, nodeptr* rear, int val){
     nodeptr node = malloc(sizeof(Node));
     node->val = val;
-    node->next = *head;
-    *head = node;
+    node->next = NULL;
+    if(*rear != NULL){
+        (*rear)->next = node;
+        *rear = node;
+    }
+    else{
+        *rear = node;
+        *front = *rear;
+    }
 }
 ```
 ![alt text](Images/push_stackLL.gif)
-### Pop
+### Dequeue
 The function outputs the value in tos and moves tos lower by 1.
 ```c
-int pop(nodeptr* head){
-    int data = (*head)->data;
-    nodeptr temp = *head;
-    *head = temp->next;
+int dequeue(nodeptr* front, nodeptr* rear){
+    nodeptr* node = *front;
+    *front = node->next;
+    if(*front = NULL){
+        *rear = NULL;
+    }
 	free(temp);
     return data;
 }
@@ -50,12 +59,12 @@ The free function deallocates the memory of the node pointer so the program reus
 Because a linked list is dynamic it can never be full.
 
 ### IsEmpty
-Functions checks if the stack is empty by checking if head is NULL.
+Functions checks if the stack is empty by checking if rear is NULL.
 
 ```c
-bool isEmpty(nodeptr head){
+bool isEmpty(nodeptr rear){
     bool empty = false;
-    if(head == NULL){
+    if(rear == NULL){
 	    empty = true;
     }
     return empty;
@@ -65,18 +74,16 @@ bool isEmpty(nodeptr head){
 ### Peek
 Function will output the value in the top of the stack/(the head node).
 ```c
-int peek(nodeptr head){
-    int data = head->val;
+int peek(nodeptr front){
+    int data = front->val;
     return data;
 }
 ```
 ## References
 ### Array version
-[Stack](Stack.md)
+[Linear Queue](Queue.md)
+[Circular Queue](CQueue.md)
 ### Examples
-[Binary Convertion](Examples/convertToBinL.c)<br>
-[PostFix Calculator](Examples/postfixL.c)<br>
-[InFix to PostFix Converter](Examples/in2postfixL.c)<br>
 
 
 [Back To Main](readme.md)
