@@ -77,4 +77,6 @@ bool isEmpty(int rear){
 [Linear Queue](Queue.md)
 ### Linked List Version
 [Queue linked List](Queue_LinkedList.md)
+### Examples
+[Time Share](Examples/timeShare.c)
 [Back To Main](readme.md)

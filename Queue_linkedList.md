@@ -84,6 +84,6 @@ int peek(nodeptr front){
 [Linear Queue](Queue.md)<br>
 [Circular Queue](CQueue.md)
 ### Examples
-
+[Time Share](Examples/timeShareL.c)
 
 [Back To Main](readme.md)
