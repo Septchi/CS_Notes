@@ -75,3 +75,6 @@ int peek(nodeptr head){
 [Stack Linked List](Stack_LinkedList.md)
 ### Examples
 [Binary Convertion](Examples/convertToBinL.c)
+
+
+[Back To Main](readme.md)

@@ -79,3 +79,6 @@ int peek(Stack stack){
 [Stack Linked List](Stack_LinkedList.md)
 ### Examples
 [Binary Convertion](Examples/convertToBin.c)
+
+
+[Back To Main](readme.md)
