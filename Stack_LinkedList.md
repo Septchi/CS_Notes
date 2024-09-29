@@ -74,9 +74,9 @@ int peek(nodeptr head){
 ### Array version
 [Stack Linked List](Stack_LinkedList.md)
 ### Examples
-[Binary Convertion](Examples/convertToBinL.c)
-[PostFix Calculator](Examples/postfixL.c)
-[InFix to PostFix Converter](Examples/in2postfixL.c)
+[Binary Convertion](Examples/convertToBinL.c)<br>
+[PostFix Calculator](Examples/postfixL.c)<br>
+[InFix to PostFix Converter](Examples/in2postfixL.c)<br>
 
 
 [Back To Main](readme.md)
