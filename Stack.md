@@ -25,8 +25,8 @@ The actual array of the Stack
 The function increases the tos by 1 and adds a value in that index.
 ```c
 void push(Stack* stack, int val){
-	stack->tos += 1;
-	stack->stk[stack->tos] = val;
+    stack->tos += 1;
+    stack->stk[stack->tos] = val;
 }
 ```
 ![push_gif](Images/push_stack.gif)
@@ -34,9 +34,9 @@ void push(Stack* stack, int val){
 The function outputs the value in tos and moves tos lower by 1.
 ```c
 int pop(Stack* stack){
-	int data = stack->stk[stack->tos];
-	stack->tos -= 1;
-	return data;
+    int data = stack->stk[stack->tos];
+    stack->tos -= 1;
+    return data;
 }
 ```
 ![pop_gif](Images/pop_stack.gif)
@@ -47,22 +47,22 @@ Even though the numbers are not removed in the array because its above tos, we c
 The function checks if the stack is full by checking if tos is equal to the last index.
 ```c
 bool isFull(int tos){
-	bool full = false;
-	if(tos == size - 1){
-		full = true;
-	}
-	return full;
+    bool full = false;
+    if(tos == size - 1){
+        full = true;
+    }
+    return full;
 }
 ```
 ### IsEmpty
 The function checks if the stack is empty by checking if tos is equal to -1.
 ```c
 bool isEmpty(int tos){
-	bool empty = false;
-	if(tos == -1){
-		empty = true;
-	}
-	return empty;
+    bool empty = false;
+    if(tos == -1){
+        empty = true;
+    }
+    return empty;
 }
 ```
 
@@ -70,8 +70,8 @@ bool isEmpty(int tos){
 Function will output the value in tos but will not move tos.
 ```c
 int peek(Stack stack){
-	int data = stack.stk[stack.tos];
-	return data;
+    int data = stack.stk[stack.tos];
+    return data;
 }
 ```
 ## References

@@ -24,7 +24,7 @@ The pointer connecting the next node.
 The function creates a new node and inserts the current top/head node next to the new  node.
 ```c
 void push(nodeptr* head, int val){
-	nodeptr node = malloc(sizeof(Node));
+    nodeptr node = malloc(sizeof(Node));
     node->val = val;
     node->next = *head;
     *head = node;
@@ -35,11 +35,11 @@ void push(nodeptr* head, int val){
 The function outputs the value in tos and moves tos lower by 1.
 ```c
 int pop(nodeptr* head){
-	int data = (*head)->data;
+    int data = (*head)->data;
     nodeptr temp = *head;
     *head = temp->next;
 	free(temp);
-	return data;
+    return data;
 }
 ```
 ![alt text](Images/pop_stackLL.gif)
@@ -47,37 +47,31 @@ int pop(nodeptr* head){
 The free function deallocates the memory of the node pointer so the program reuse the memory from the free'd node.
 ```
 ### IsFull
-Functions checks if the stack is full by checking if tos is equal to the last index.
-```c
-bool isFull(int tos){
-	bool full = false;
-	if(tos == size - 1){
-		full = true;
-	}
-	return full;
-}
-```
+Because a linked list is dynamic it can never be full.
+
 ### IsEmpty
 Functions checks if the stack is empty by checking if tos is equal to -1.
+
 ```c
 bool isEmpty(nodeptr head){
-	bool empty = false;
-	if(head == NULL){
-		empty = true;
-	}
-	return empty;
+    bool empty = false;
+    if(head == NULL){
+	    empty = true;
+    }
+    return empty;
 }
 ```
 
-### Peak
+### Peek
 Function will output the value in the top of the stack/(the head node).
 ```c
-int peak(nodeptr head){
-	int data = head.val;
-	return data;
+int peek(nodeptr head){
+    int data = head.val;
+    return data;
 }
 ```
 ## References
 ### Array version
 [Stack Linked List](Stack_LinkedList.md)
 ### Examples
+[Binary Convertion](Examples/convertToBinL.c)
