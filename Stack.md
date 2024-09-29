@@ -79,6 +79,8 @@ int peek(Stack stack){
 [Stack Linked List](Stack_LinkedList.md)
 ### Examples
 [Binary Convertion](Examples/convertToBin.c)
+[PostFix Calculator](Examples/postfix.c)
+[InFix to PostFix Converter](Examples/in2postfix.c)
 
 
 [Back To Main](readme.md)
