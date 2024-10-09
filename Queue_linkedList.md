@@ -37,7 +37,6 @@ void enqueue(nodeptr* front, nodeptr* rear, int val){
     }
 }
 ```
-![alt text](Images/push_stackLL.gif)
 ### Dequeue
 The function outputs the value in tos and moves tos lower by 1.
 ```c
@@ -47,11 +46,11 @@ int dequeue(nodeptr* front, nodeptr* rear){
     if(*front = NULL){
         *rear = NULL;
     }
+    int data = node->data;
 	free(temp);
     return data;
 }
 ```
-![alt text](Images/pop_stackLL.gif)
 ``` 
 The free function deallocates the memory of the node pointer so the program reuse the memory from the free'd node.
 ```
