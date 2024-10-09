@@ -4,4 +4,4 @@
 ## [Stack Linked List](Stack_LinkedList.md)
 ## [Queue](Queue.md)
 ## [Circlular Queue](CQueue.md)
-## [Queue Linked List](Queue_LinkedList.md)
+## [Queue Linked List](Queue_linkedList.md)
