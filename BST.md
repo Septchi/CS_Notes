@@ -25,6 +25,31 @@ The right node of the current node. the right node's **val** is always greater t
 The function adds a new node to the current tree.
 ```c
 void add_Node(nodeptr *root, int val){
-    nodeptr new_node = 
+    nodeptr node = *root, parent;
+    nodeptr new_node = malloc(sizeof(nodeptr));
+    new_node->val = val;
+    new_node->left = NULL;
+    new_node->right = NULL;
+    while(node != NULL){
+        parent = node;
+        if(val < node->val)
+            node = node->left;
+        else
+            node = node->right;
+    }
+    if(parent == NULL)
+        *root = new_node;
+    else if(val < parent->val)
+        parent->left = new_node;
+    else
+        parent->right = new_node;
 }
 ```
+#### node
+the node we use to traverse the tree.
+#### parent
+the parent node of **node**. We use it so when node is NULL we know where to insert **new_node**
+#### new_node
+the new node to insert
+
+![BST_Add](Images/BST_Add.gif)
