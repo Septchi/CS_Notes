@@ -17,7 +17,7 @@ The value stored in the node.
 The pointer connecting the next node.
 
 #### Linked List Structure
-![alt text](Images/stack_linkedlist.png)
+![stack_linkedList](Images/stack_linkedlist.png)
 
 ## Stack Operations
 ### Enqueue
