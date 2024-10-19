@@ -90,6 +90,7 @@ void deleteLeaf_Node(nodeptr *root, nodeptr *node, nodeptr *parent){
     free(*node);
 }
 ```
+![BST Delete Leaf](Images/BST_DelLeaf.gif)
 
 #### Delete Child
 The function frees a node with one child,
@@ -115,6 +116,7 @@ void deleteChild_Node(nodeptr *root, nodeptr *node, nodeptr *parent){
 }
 ```
 
+![BST Delete Child](Images/BST_DelChild.gif)
 #### Delete Children
 The function frees a node with two children.
 Because **node** has two children we cant just use one of the children to swap with **node**.
@@ -143,3 +145,4 @@ void deleteChildren_Node(nodeptr *node nodeptr *parent){
     free(*parent);
 }
 ```
+![BST Delete Children](Images/BST_DelChildren.gif)
