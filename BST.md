@@ -1,6 +1,7 @@
 # Binary Search Tree
 A binary search is a data structure that uses nodes that are connected to other nodes.
 Since its binary each node is connect to two other nodes.
+<br>
 ![BST](Images/BST.png)
 
 ## Structure
