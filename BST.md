@@ -123,7 +123,7 @@ Because **node** has two children we cant just use one of the children to swap w
 So we have to use the nodes **inOrder** predecessor.
 
 ```c
-void deleteChildren_Node(nodeptr *node nodeptr *parent){
+void deleteChildren_Node(nodeptr *node, nodeptr *parent){
     nodeptr successor;
     *parent = (*node)->right;
     while((*parent)->left != NULL){
