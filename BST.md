@@ -116,7 +116,6 @@ void deleteChild_Node(nodeptr *root, nodeptr *node, nodeptr *parent){
     free(*ptr);
 }
 ```
-
 ![BST Delete Child](Images/BST_DelChild.gif)
 #### Delete Children
 The function frees a node with two children.
@@ -146,4 +145,23 @@ void deleteChildren_Node(nodeptr *node nodeptr *parent){
     free(*parent);
 }
 ```
+
 ![BST Delete Children](Images/BST_DelChildren.gif)
+
+### Master Delete
+The main delete function. All the sub functions are inside Master Delete.
+```c
+void masterDelete_Node(nodeptr *root){
+    nodeptr node = *root, parent = NULL:
+    bool found;
+    found = searchDelete_Node(&node, &parent);
+    if(found){
+        if(node->left == NULL && node->right == NULL)
+            deleteLeaf_Node(root, &node, &parent);
+        else if(node->left != NULL && node->right != NULL)
+            deleteChild_Node(root, &node, &parent);
+        else
+            deleteChildren_Node(root, &node, &parent);
+    }
+}
+```
