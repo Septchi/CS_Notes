@@ -152,7 +152,7 @@ void deleteChildren_Node(nodeptr *node nodeptr *parent){
 ### Master Delete
 The main delete function. All the sub functions are inside Master Delete.
 ```c
-void masterDelete_Node(nodeptr *root){
+void masterDelete_Node(nodeptr *root, int val){
     nodeptr node = *root, parent = NULL:
     bool found;
     found = searchDelete_Node(&node, &parent);
