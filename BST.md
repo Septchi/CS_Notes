@@ -64,7 +64,7 @@ Uses two double pointers for **parent** and **node**.
 ```c
 bool searchDelete_Node(nodeptr *node, nodeptr *parent, int key){
     bool found = false;
-    while (!found == (*node != NULL)){
+    while (!found && (*node != NULL)){
         if(key == (*node)->val)
             found = true;
         else{
@@ -75,6 +75,7 @@ bool searchDelete_Node(nodeptr *node, nodeptr *parent, int key){
                 *node = (*node)->right;
         }
     }
+    return found;
 }
 ```
 #### Delete Leaf
