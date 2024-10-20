@@ -159,9 +159,9 @@ void masterDelete_Node(nodeptr *root){
         if(node->left == NULL && node->right == NULL)
             deleteLeaf_Node(root, &node, &parent);
         else if(node->left != NULL && node->right != NULL)
-            deleteChild_Node(root, &node, &parent);
-        else
             deleteChildren_Node(root, &node, &parent);
+        else
+            deleteChild_Node(root, &node, &parent);
     }
 }
 ```
