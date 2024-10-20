@@ -131,7 +131,7 @@ void deleteChildren_Node(nodeptr *node nodeptr *parent){
         successor = *parent;
         *parent = (*parent)->left;
     }
-    (*node)->val = (*parent)->num;
+    (*node)->val = (*parent)->val;
     if(successor == NULL)
         if((*parent)->right == NULL)
             (*node)->right = NULL;
