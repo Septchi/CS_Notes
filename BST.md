@@ -124,7 +124,7 @@ Because **node** has two children we cant just use one of the children to swap w
 So we have to use the nodes **inOrder** predecessor.
 
 ```c
-void deleteChildren_Node(nodeptr *node nodeptr *parent){
+void deleteChildren_Node(nodeptr *node nodeptr, *parent){
     nodeptr successor;
     *parent = (*node)->right;
     while((*parent)->left != NULL){
@@ -160,7 +160,7 @@ void masterDelete_Node(nodeptr *root, int val){
         if(node->left == NULL && node->right == NULL)
             deleteLeaf_Node(root, &node, &parent);
         else if(node->left != NULL && node->right != NULL)
-            deleteChildren_Node(root, &node, &parent);
+            deleteChildren_Node(&node, &parent);
         else
             deleteChild_Node(root, &node, &parent);
     }
