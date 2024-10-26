@@ -64,7 +64,7 @@ Uses two double pointers for **parent** and **node**.
 ```c
 bool searchDelete_Node(nodeptr *node, nodeptr *parent, int key){
     bool found = false;
-    while (!found == (*ptr != NULL)){
+    while (!found && (*node != NULL)){
         if(key == (*node)->val)
             found = true;
         else{
@@ -75,6 +75,7 @@ bool searchDelete_Node(nodeptr *node, nodeptr *parent, int key){
                 *node = (*node)->right;
         }
     }
+    return found;
 }
 ```
 #### Delete Leaf
@@ -124,13 +125,14 @@ So we have to use the nodes **inOrder** predecessor.
 
 ```c
 void deleteChildren_Node(nodeptr *node, nodeptr *parent){
+
     nodeptr successor;
     *parent = (*node)->right;
     while((*parent)->left != NULL){
         successor = *parent;
         *parent = (*parent)->left;
     }
-    (*node)->val = (*parent)->num;
+    (*node)->val = (*parent)->val;
     if(successor == NULL)
         if((*parent)->right == NULL)
             (*node)->right = NULL;
@@ -151,7 +153,7 @@ void deleteChildren_Node(nodeptr *node, nodeptr *parent){
 ### Master Delete
 The main delete function. All the sub functions are inside Master Delete.
 ```c
-void masterDelete_Node(nodeptr *root){
+void masterDelete_Node(nodeptr *root, int val){
     nodeptr node = *root, parent = NULL:
     bool found;
     found = searchDelete_Node(&node, &parent);
@@ -159,9 +161,9 @@ void masterDelete_Node(nodeptr *root){
         if(node->left == NULL && node->right == NULL)
             deleteLeaf_Node(root, &node, &parent);
         else if(node->left != NULL && node->right != NULL)
-            deleteChild_Node(root, &node, &parent);
+            deleteChildren_Node(&node, &parent);
         else
-            deleteChildren_Node(root, &node, &parent);
+            deleteChild_Node(root, &node, &parent);
     }
 }
 ```
