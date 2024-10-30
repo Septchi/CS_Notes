@@ -47,7 +47,7 @@ int dequeue(nodeptr* front, nodeptr* rear){
         *rear = NULL;
     }
     int data = node->data;
-	free(temp);
+    free(nod);
     return data;
 }
 ```
