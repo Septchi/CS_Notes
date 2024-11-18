@@ -38,7 +38,7 @@ void EnQueue(Queue* queue, int val){
 ### DeQueue
 The function saves front in data; increments front; and returns data.
 ```c
-return DeQueue(Queue* queue){
+int DeQueue(Queue* queue){
     int data queue->que[queue->front];
     queue->front += 1;
     return data;
