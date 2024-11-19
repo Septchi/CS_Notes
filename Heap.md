@@ -3,6 +3,13 @@
 A heap is a type of queue that after inserting arranges the data so either
 the least or greatest value is in the first index(Min heap or Max heap).
 
+## Heap Versions
+
+### Tree
+![Heap_Tree](Images/Heap_Tree.png)
+### Array
+![Heap_Array](Images/Heap_Array.png)
+
 ## Heap Array
 ```c
 typedef struct{
@@ -10,6 +17,7 @@ typedef struct{
     int hsize;
 }Heap;
 ```
+
 
 #### arr
 the array of the Heap.
@@ -31,6 +39,7 @@ void insert(Heap *heap, int val){
 }
 ```
 
+![insert_gif](Images/Heap_Insert.gif)
 ### Delete
 The function returns the first index of the heap and removes it from the array.
 
