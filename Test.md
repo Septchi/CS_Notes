@@ -9,8 +9,8 @@
 
 
 ## Essay
-1. Difference between Min and Max heap.
-2. Explain how a heap removes an item.
+1. Difference between Min and Max heap.//3
+2. Explain how a heap removes an item.//3
 3. Explain why Modular Arithmatic uses Table_Size.
 4. Explain the difference between open addressing and separate chaining.
 5. Explain Truncation.
@@ -28,10 +28,11 @@ bool isFull(int hsize){
     return full;
 }
 ```
-1. Does this Insert Heap Function work. Yes/ No. Explain!
+2. Does this Insert Heap Function work. Yes/ No. Explain!
 ```c
 void insert(Heap heap, int val){
     heap.hsize++;
+    j = heap.hsize;
     while(heap.arr[j/2] > val){
         heap.arr[j] = heap.arr[j/2];
         j /=2;
@@ -40,7 +41,7 @@ void insert(Heap heap, int val){
 }
 ```
 
-2. Does this Add Hash Function work. Yes/ No. Explain!
+3. Does this Add Hash Function work. Yes/ No. Explain!
 
 ```c
 void Hash_Add(HASH hash[], CUSTOMER cust){

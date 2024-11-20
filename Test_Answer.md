@@ -51,12 +51,13 @@ size of the array minus one.
 1. Does this Insert Heap Function work. Yes/ No. Explain!
 ```c
 void insert(Heap heap, int val){
-    heap->hsize++;
-    while(heap->arr[j/2] > val){
-        heap->arr[j] = heap->arr[j/2];
+    heap.hsize++;
+    j = heap.hsize;
+    while(heap.arr[j/2] > val){
+        heap.arr[j] = heap.arr[j/2];
         j /=2;
     }
-    heap->arr[j] = val;
+    heap.arr[j] = val;
 }
 ```
 No because the parameter uses heap as value not reference. So the hsize will not
