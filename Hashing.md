@@ -63,7 +63,7 @@ int folding(int key){
         digit++;
     }
     int tdigit = digit/2;
-    int first = key % power(10, tdigit);
+    int first = key / power(10, tdigit);
     int second = key % power(10, digit - tdigit);
     return first + second;
 }
@@ -78,8 +78,9 @@ int radix(int key, int radix){
     while(tkey != 0){
         rad += (tkey%radix)*power(10, n);
         n++;
+        tkey /= radix;
     }
-    return;
+    return rad;
 }
 ```
 
