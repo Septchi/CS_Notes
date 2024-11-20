@@ -120,3 +120,9 @@ int DHashing(int index, int key){
     return (index + increment) % SIZE;
 }
 ```
+
+### Separate Chaining
+
+Confusing so ill put it here.
+
+#### [Link List Hash](LL_Hash.md)
