@@ -3,7 +3,7 @@
 2. Hash functions will always have a chance of collsion.
 3. Heap should insert the first number at 0.
 4. You should use Hashing when your values are in order.
-5. The first index of the heap is the least or greatest number.
+5. The first value of the heap is the least or greatest number.
 6. Its better to have a table size that is prime.
 7. To get the left child of an index in the heap you do **2i + 1**.
 
@@ -31,12 +31,12 @@ bool isFull(int hsize){
 1. Does this Insert Heap Function work. Yes/ No. Explain!
 ```c
 void insert(Heap heap, int val){
-    heap->hsize++;
-    while(heap->arr[j/2] > val){
-        heap->arr[j] = heap->arr[j/2];
+    heap.hsize++;
+    while(heap.arr[j/2] > val){
+        heap.arr[j] = heap.arr[j/2];
         j /=2;
     }
-    heap->arr[j] = val;
+    heap.arr[j] = val;
 }
 ```
 
