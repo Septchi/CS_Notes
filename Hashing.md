@@ -122,6 +122,70 @@ int DHashing(int index, int key){
 }
 ```
 
+### Hash Operations
+#### Add Hash
+Adds an item to the Hash
+```c
+bool addHash(HASH hash[], CUSTOMER cust){
+    int key = cust.id % SIZE;
+    bool found = true;
+    int key1 = -1;
+    while(!found && key != key1){
+        if(key1 == -1)
+            key1 = key;
+        if(hash[key].status != 'o')
+            found = true;
+        key = (key+1) % SIZE;
+    }
+    hash[index] = cust;
+    hash[index].status = 'o';
+
+    return found;
+}
+```
+
+#### Delete Hash
+Delete an item to the Hash
+```c
+bool deleteHash(HASH hash[], int skey){
+    int key = cust.id % SIZE;
+    bool found = true;
+    int key1 = -1;
+    while(!found && key != key1){
+        if(key1 == -1)
+            key1 = key;
+        if(hash[key].status == 'o' && hash[key].id == skey)
+            found = true;
+        else if(hash[key].status == 'e')
+            break;
+        key = (key+1) % SIZE;
+    }
+    hash[key].status = 'd';
+
+    return found;
+}
+
+```
+#### Search Hash
+Search an item to the Hash
+```c
+bool searchHash(HASH hash[], int skey, CUSTOMER *data){
+    int key = cust.id % SIZE;
+    bool found = true;
+    int key1 = -1;
+    while(!found && key != key1){
+        if(key1 == -1)
+            key1 = key;
+        if(hash[key].status == 'o' && hash[key].id == skey)
+            found = true;
+        else if(hash[key].status == 'e')
+            break;
+        key = (key+1) % SIZE;
+    }
+    *data = hash[key];
+    hash[key].status = 'd';
+}
+```
 ### Separate Chaining
 
 Confusing so ill put it here.
