@@ -74,8 +74,8 @@ void heapify(int index, int arr[], int hsize){
     }
 }
 
-![insert_gif](Images/Heap_Delete.gif)
 ```
+![insert_gif](Images/Heap_Delete.gif)
 ### IsFull
 The function checks if the heap is full.
 ```c

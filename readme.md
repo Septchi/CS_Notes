@@ -6,3 +6,4 @@
 ## [Circlular Queue](CQueue.md)
 ## [Queue Linked List](Queue_linkedList.md)
 ## [BST](BST.md)
+## [Heap](Heap.md)
