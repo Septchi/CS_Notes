@@ -67,7 +67,7 @@ deletes the item you want in the hash table.
 bool Hash_Delete(HASH hash[], int key){
     int index;
     bool found = true;
-    index = cust.id % TableSize;
+    index = key % TableSize;
     nd tp = hash[index].head, tp1;
     while(temp != NULL && !found){
         if(temp->cust.id == key){
