@@ -31,8 +31,8 @@ bool isFull(int hsize){
 2. Does this Insert Heap Function work. Yes/ No. Explain!
 ```c
 void insert(Heap heap, int val){
-    heap.hsize++;
-    j = heap.hsize;
+    ++heap.hsize;
+    int j = heap.hsize;
     while(heap.arr[j/2] > val){
         heap.arr[j] = heap.arr[j/2];
         j /=2;
