@@ -66,7 +66,7 @@ deletes the item you want in the hash table.
 ```c
 bool Hash_Delete(HASH hash[], int key){
     int index;
-    bool found = true;
+    bool found = false;
     index = key % TableSize;
     nd tp = hash[index].head, tp1;
     while(tp != NULL && !found){
@@ -96,7 +96,7 @@ Finds the item you want in the hash table and returns it as a parameter.
 ```c
 bool Hash_Search(HASH hash[], int key, CUSTOMER *data){
     int index;
-    bool found = true;
+    bool found = false;
     index = cust.id % TableSize;
     nd tp = hash[index].head, tp1;
     while(tp != NULL && !found){
