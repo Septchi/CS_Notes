@@ -50,13 +50,13 @@ adds a new Item in the hash table.
 void Hash_Add(HASH hash[], CUSTOMER cust){
     int index;
     index = cust.id % TableSize;
-    nd temp = malloc(sizeof(NODE));
-    temp->cust = cust;
-    temp->next = NULL:
+    nd tp = malloc(sizeof(NODE));
+    tp->cust = cust;
+    tp->next = NULL:
 
     if(hash[index].head != NULL)
-        temp->next = hash[index].head;
-    hash[index].head = temp;
+        tp->next = hash[index].head;
+    hash[index].head = tp;
 }
 ```
 
@@ -69,8 +69,8 @@ bool Hash_Delete(HASH hash[], int key){
     bool found = true;
     index = key % TableSize;
     nd tp = hash[index].head, tp1;
-    while(temp != NULL && !found){
-        if(temp->cust.id == key){
+    while(tp != NULL && !found){
+        if(tp->cust.id == key){
             if(tp1 == NULL)
                 hash[index].head = NULL;
             else if(tp->next == NULL)
@@ -99,9 +99,9 @@ bool Hash_Search(HASH hash[], int key, CUSTOMER *data){
     bool found = true;
     index = cust.id % TableSize;
     nd tp = hash[index].head, tp1;
-    while(temp != NULL && !found){
-        if(temp->cust.id == key){
-            *data = temp->cust;
+    while(tp != NULL && !found){
+        if(tp->cust.id == key){
+            *data = tp->cust;
         }
         else{
             tp1 = tp;
