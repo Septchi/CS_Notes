@@ -149,7 +149,7 @@ Delete an item to the Hash
 ```c
 bool deleteHash(HASH hash[], int skey){
     int key = cust.id % SIZE;
-    bool found = true;
+    bool found = false;
     int key1 = -1;
     while(!found && key != key1){
         if(key1 == -1)
@@ -171,7 +171,7 @@ Search an item to the Hash
 ```c
 bool searchHash(HASH hash[], int skey, CUSTOMER *data){
     int key = cust.id % SIZE;
-    bool found = true;
+    bool found = false;
     int key1 = -1;
     while(!found && key != key1){
         if(key1 == -1)
