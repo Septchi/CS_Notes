@@ -48,8 +48,8 @@ int addEven(int arr[], int n){
 3.
 ```c
 bool hasOdd(int arr[], int n){
+    bool even = false;
     for(int i = 0; i < n; i++){
-        bool even = false;
         if(arr[i]%2){
             even = true;
             break;
