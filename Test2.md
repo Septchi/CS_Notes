@@ -86,7 +86,7 @@ void print(int arr[], int n){
 1. 
 |5|4|3|2|1|
 |-|-|-|-|-|
-| | | | | |
+|‎|‎|‎|‎|‎|
 ```c
 void bubbleSort(arr[], int n){
     for(int i = 0; i<n-1; i++){
@@ -107,7 +107,7 @@ void bubbleSort(arr[], int n){
 2. 
 |5|4|3|2|1|
 |-|-|-|-|-|
-| | | | | |
+|‎|‎|‎|‎|‎|
 
 ```c
 void insertionSort(int arr[], int n){
