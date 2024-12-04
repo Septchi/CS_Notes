@@ -93,7 +93,8 @@ void print(int arr[], int n){
 
 # Simulate
 
-1. 
+1. write the print statement in the table 
+
 |5|4|3|2|1|
 |-|-|-|-|-|
 |‎|‎|‎|‎|‎|
@@ -113,12 +114,17 @@ void bubbleSort(arr[], int n){
                 swapped = true;
             }
         }
+        for(int i = 0; i < n; i++){
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
         if(!swapped)
             break;
     }
 }
 ```
-2. 
+2. Write the print statement in the table
+
 |5|4|3|2|1|
 |-|-|-|-|-|
 |‎|‎|‎|‎|‎|
