@@ -10,7 +10,7 @@ what is the run time of the of algorithm.
 
 5. What is the Average case of an algorithm.
 
-6. What is the worst case of an algorithm with an if else statement.
+6. What is the worst case of an if else statement.
 
 7. What are input classes.
 
