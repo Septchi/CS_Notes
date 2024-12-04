@@ -1,15 +1,24 @@
 # Essay
 1. In algorithm analysis what are we measuring.
+
 2. What are two operations that are not counted in algorithm analysis.
+
 3. If an algorithm has one nested for loop 
 what is the run time of the of algorithm.
+
 4. Why do we do algorithm analysis.
+
 5. What is the Average case of an algorithm.
-6. What is the worst case of algorithm with an if else statement.
+
+6. What is the worst case of an algorithm with an if else statement.
+
 7. What are input classes.
+
 8. In doing algorithm analysis 
 what are the two important aspects we are looking for.
+
 9. What is an algorithm
+
 10. Why do we remove lower order terms and leading constants in the final running time.
 
 # Solve
@@ -30,9 +39,10 @@ int sumArr(int arr[], int n){
 int addEven(int arr[], int n){
     int total = 0;
     for(int i = 0; i < n; i++){
-        if(arr[i]/2 == 0)
+        if(arr[i]%2 == 0)
             total++;
     }
+    return total;
 }
 ```
 3.
